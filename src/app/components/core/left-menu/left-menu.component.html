@@ -1,0 +1,15 @@
+<div class="sidebar">
+  <div class="sidebar-menu">
+    <ul *ngIf="leftNavMenuObj.moduleSubHeaders.length > 0">
+      <li *ngFor="let navObj of leftNavMenuObj.moduleSubHeaders">
+        <ng-container *ngIf="navObj.display">
+          <span class="subHead"><u>{{ navObj.moduleSubHead }}</u> </span><br>
+          <ng-container *ngFor="let navlink of navObj.moduleLinks">
+            <a *ngIf="navlink.display" routerLinkActive="active" [routerLink]="navlink.targetURL">
+              {{ navlink.linkTitle }}</a> 
+          </ng-container><br>
+        </ng-container>
+      </li>
+    </ul>
+  </div>
+</div>

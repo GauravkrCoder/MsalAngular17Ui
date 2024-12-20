@@ -1,0 +1,38 @@
+.sidebar {
+  width: 285px;
+  min-height: 80vh;
+  border-right: 3px solid grey;
+}
+
+.sidebar-menu>li>span {
+  display: flex;
+}
+
+.sidebar-menu a {
+  display: block;
+}
+
+.sidebar-menu a {
+  font-size: 20px;
+  padding-left: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li>span {
+  text-transform: uppercase;
+}
+
+.subHead {
+  color: #444f45;
+  font-size: 22px;
+  // padding: 10px;
+}
+
+li>a {
+  color: #444f45;
+  padding: 3px;
+  text-decoration: none;
+}

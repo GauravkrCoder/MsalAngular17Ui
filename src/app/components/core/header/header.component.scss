@@ -1,0 +1,23 @@
+.navbar {
+    width: 100%;
+    min-height: 50px;
+    border: 1px solid teal;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #93b874;
+    color: #ffffff;
+}
+
+.unorderList{
+    display: flex;
+    list-style: none;
+    gap: 10px;   
+}
+
+.item{
+    color: #444f45;
+    padding: 5px;
+    font-weight: 600;
+}
+
