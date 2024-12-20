@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/core/home/home.component';
+import { MsalLoginComponent } from './components/core/msal-login/msal-login.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
+    { path: '', component: MsalLoginComponent },
     // { path: '', component: HomeComponent },
     {
         path: '', component: HomeComponent,

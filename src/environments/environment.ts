@@ -22,7 +22,7 @@ export const environment = {
       apiBaseURL: 'http://localhost:3001/api',
       msalClientId: 'a9c141af-2869-4828-bb17-ca685441db6e',
       msalTenantId: 'f8cdef31-a31e-4b4a-93e4-5f571e91255a',
-      redirectUri: 'http://localhost:4200/msal'
+      redirectUri: 'http://localhost:4200'
     },
   
     SERVICE_URL_DEV: {
@@ -30,7 +30,7 @@ export const environment = {
       apiBaseURL: 'http://localhost:3000',
       msalClientId: 'a9c141af-2869-4828-bb17-ca685441db6e',
       msalTenantId: 'f8cdef31-a31e-4b4a-93e4-5f571e91255a',
-      redirectUri: 'http://localhost:4200'
+      redirectUri: 'http://localhost:4200/request/add'
     },
   
     SERVICE_URL_TEST: {

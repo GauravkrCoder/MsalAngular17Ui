@@ -1,6 +1,10 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { RolesDefined } from '../statics/roles-constants';
 import AppUtils from '../utils/appUtils';
+import { Subject, Subscription } from 'rxjs';
+import { SharedApiService } from './shared-api.service';
+import { DialogService } from 'primeng/dynamicdialog';
+import { GenericApiMessagesComponent } from '../components/generic-api-messages/generic-api-messages.component';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +12,19 @@ import AppUtils from '../utils/appUtils';
 export class SharedService {
 
   public _clientRoles: Array<string>;
+  public invokeMSALLogin = new EventEmitter();
+  public subsVar: Subscription;
 
-  constructor() { }
+  public _publishRedirectionFromEdit: Subject<boolean> = new Subject<boolean>();
+
+  constructor(
+    private _sharedApiService: SharedApiService,
+    private _dialogService: DialogService,
+  ) { }
+
+  set publishRedirectionFromEdit(flag: boolean) {
+    this._publishRedirectionFromEdit.next(flag);
+  }
 
   get clientRoles(): Array<any> {
     if (this._clientRoles) {
@@ -44,6 +59,21 @@ export class SharedService {
       // _clientRoles = (_decodeToken?.roles && _decodeToken?.roles.length > 0) ? _decodeToken?.roles : [];
     }
     return _clientRoles;
+  }
+
+  public showDialog(options: any, isGenericMsg: boolean = false, isEditScreen: boolean = false): void {
+    const _component = !isGenericMsg ? options.component : GenericApiMessagesComponent;
+    const ref = this._dialogService.open(_component, options.config);
+
+    ref.onClose.subscribe((response) => {
+      if (response) {
+        console.log('Closing Dialog');
+      }
+      else if (isEditScreen) {
+        this.publishRedirectionFromEdit = true;
+      }
+    })
+
   }
 
 }
