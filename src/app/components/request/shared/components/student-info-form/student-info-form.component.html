@@ -1,0 +1,58 @@
+<form [formGroup]="studentInfoForm">
+    <div class="form-section">
+        <fieldset class="reset">
+            <legend class="reset">Student Information:</legend>
+            <div class="formgrid grid">
+                <div class="field col">
+                    <p-floatLabel>
+                        <input pInputText id="candidateName" formControlName="student_name" />
+                        <label for="candidateName">Candidate's name</label>
+                    </p-floatLabel>
+                </div>
+                <div class="field col">
+                    <p-floatLabel>
+                        <input pInputText id="candidateName" formControlName="mother_name" />
+                        <label for="candidateName">Mother's name</label>
+                    </p-floatLabel>
+                </div>
+                <div class="field col">
+                    <p-floatLabel>
+                        <input pInputText id="candidateName" formControlName="father_name" />
+                        <label for="candidateName">Father's name</label>
+                    </p-floatLabel>
+                </div>
+            </div>
+            <div class="formgrid grid">
+                <div class="field col">
+                    <p-floatLabel>
+                        <input pInputText id="candidateName" formControlName="date_of_birth" />
+                        <label for="candidateName">Date of Birth</label>
+                    </p-floatLabel>
+                </div>
+                <div class="field col">
+                    <p-floatLabel>
+                        <input pInputText id="candidateName" formControlName="nationality" />
+                        <label for="candidateName">Mother's name</label>
+                    </p-floatLabel>
+                </div>
+                <div class="field col">
+                    <!-- <p-floatLabel> -->
+                        <!-- <input pInputText id="candidateName" formControlName="category" />
+                        <label for="candidateName">Mother's name</label> -->
+                        <p-dropdown [options]="categoryList" formControlName="category" optionLabel="catgry_nme"
+                            placeholder="Select your category" />
+                    <!-- </p-floatLabel> -->
+
+                </div>
+            </div>
+            <div class="formgrid grid">
+                <div class="field col">
+                    <p-floatLabel>
+                        <input pInputText id="candidateName" formControlName="aadhaar_no" />
+                        <label for="candidateName">Aadhaar No.</label>
+                    </p-floatLabel>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</form>
