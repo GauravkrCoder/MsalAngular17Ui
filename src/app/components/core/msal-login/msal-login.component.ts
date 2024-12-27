@@ -84,7 +84,7 @@ export class MsalLoginComponent implements OnInit, OnDestroy {
       const token: string = res.accessToken;
       this._lfgemail = 'testuser23@lfg.com';
       sessionStorage.setItem('_isLoggedIn', token);
-      this._router.navigate(['./']);
+      this._router.navigate(['./request/add']);
       // this._sharedService.triggerJWTTOkenValidation({ applctn_token_id: token });
       // const tempToken="fhjkadhfhfnsahfhasf";
       // this._sharedService.triggerJWTTOkenValidation({ applctn_token_id:tempToken});

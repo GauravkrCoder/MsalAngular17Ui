@@ -13,7 +13,7 @@ import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
 import { ChipsModule } from 'primeng/chips';
-
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 
 @NgModule({
@@ -32,7 +32,8 @@ import { ChipsModule } from 'primeng/chips';
     DialogModule,
     DropdownModule,
     CalendarModule,
-    ChipsModule
+    ChipsModule,
+    FloatLabelModule
   ],
   exports: [
     CommonModule,
@@ -47,7 +48,8 @@ import { ChipsModule } from 'primeng/chips';
     DialogModule,
     DropdownModule,
     CalendarModule,
-    ChipsModule
+    ChipsModule,
+    FloatLabelModule
   ]
 })
 export class PrimengUiComponentsModule { }

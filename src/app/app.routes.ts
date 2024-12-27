@@ -4,6 +4,7 @@ import { MsalLoginComponent } from './components/core/msal-login/msal-login.comp
 
 export const routes: Routes = [
     { path: '', component: MsalLoginComponent },
+    { path: 'msal', component: MsalLoginComponent },
     // { path: '', component: HomeComponent },
     {
         path: '', component: HomeComponent,
