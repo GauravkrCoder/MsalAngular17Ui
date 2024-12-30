@@ -1,11 +1,15 @@
-<div class="navbar">
+<nav class="navbar">
     <div class="brandLogo"><h4>Azure Setup</h4></div>
+    <div class="hamburger-menu" onclick="toggleMenu()">Menu</div>    
     <div class="menuList">        
-            <ul class="unorderList">
-                <li class="item">Home</li>
-                <li class="item">Home</li>
-                <li class="item">Home</li>
-                <li class="item">Home</li>
+            <ul class="unorderList navbar__menu-list">
+                <li class="item navbar__menu-item">Home</li>
+                <li class="item navbar__menu-item">Home</li>
+                <li class="item navbar__menu-item">Home</li>
+                <li class="item navbar__menu-item">Home</li>
+                <li class="item navbar__menu-item">
+                    <app-count-down-timer></app-count-down-timer>
+                </li>
             </ul>        
     </div>
-</div>
+</nav>

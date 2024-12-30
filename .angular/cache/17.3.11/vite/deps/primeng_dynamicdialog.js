@@ -12,6 +12,13 @@ import {
   DomHandler
 } from "./chunk-JZQAVOZS.js";
 import {
+  PrimeNGConfig,
+  SharedModule,
+  TranslationKeys,
+  UniqueComponentId,
+  zindexutils
+} from "./chunk-ZZTWXEON.js";
+import {
   animate,
   animation,
   style,
@@ -19,13 +26,6 @@ import {
   trigger,
   useAnimation
 } from "./chunk-YQXYJLFY.js";
-import {
-  PrimeNGConfig,
-  SharedModule,
-  TranslationKeys,
-  UniqueComponentId,
-  zindexutils
-} from "./chunk-ZZTWXEON.js";
 import {
   CommonModule,
   DOCUMENT,

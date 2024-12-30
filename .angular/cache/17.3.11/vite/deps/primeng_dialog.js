@@ -9,26 +9,18 @@ import {
   ButtonModule
 } from "./chunk-BNGMW27F.js";
 import "./chunk-JTV5PNQJ.js";
+import {
+  TimesIcon
+} from "./chunk-3FYHRN5Z.js";
 import "./chunk-D6XBDACV.js";
+import "./chunk-WLYWGUUJ.js";
 import {
   Ripple,
   RippleModule
 } from "./chunk-WOEHJZ3I.js";
 import {
-  TimesIcon
-} from "./chunk-3FYHRN5Z.js";
-import "./chunk-WLYWGUUJ.js";
-import {
   DomHandler
 } from "./chunk-JZQAVOZS.js";
-import {
-  animate,
-  animation,
-  style,
-  transition,
-  trigger,
-  useAnimation
-} from "./chunk-YQXYJLFY.js";
 import {
   Footer,
   Header,
@@ -39,6 +31,14 @@ import {
   UniqueComponentId,
   zindexutils
 } from "./chunk-ZZTWXEON.js";
+import {
+  animate,
+  animation,
+  style,
+  transition,
+  trigger,
+  useAnimation
+} from "./chunk-YQXYJLFY.js";
 import {
   CommonModule,
   DOCUMENT,

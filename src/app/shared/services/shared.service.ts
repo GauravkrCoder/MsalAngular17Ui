@@ -1,7 +1,7 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { RolesDefined } from '../statics/roles-constants';
 import AppUtils from '../utils/appUtils';
-import { Subject, Subscription } from 'rxjs';
+import { BehaviorSubject, Subject, Subscription } from 'rxjs';
 import { SharedApiService } from './shared-api.service';
 import { DialogService } from 'primeng/dynamicdialog';
 import { GenericApiMessagesComponent } from '../components/generic-api-messages/generic-api-messages.component';
@@ -16,6 +16,7 @@ export class SharedService {
   public subsVar: Subscription;
 
   public _publishRedirectionFromEdit: Subject<boolean> = new Subject<boolean>();
+  public _publishSessionTimeout: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor(
     private _sharedApiService: SharedApiService,
@@ -24,6 +25,10 @@ export class SharedService {
 
   set publishRedirectionFromEdit(flag: boolean) {
     this._publishRedirectionFromEdit.next(flag);
+  }
+
+  set publishSessionTimeout(data: boolean) {
+    this._publishSessionTimeout.next(data);
   }
 
   get clientRoles(): Array<any> {
